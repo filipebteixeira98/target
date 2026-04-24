@@ -27,7 +27,7 @@ export default function Layout() {
     }
   }, [areFontsLoaded, error]);
 
-  if (!areFontsLoaded || !error) {
+  if (!areFontsLoaded || error) {
     return <Loading />;
   }
 
