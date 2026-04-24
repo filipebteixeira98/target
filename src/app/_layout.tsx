@@ -8,6 +8,8 @@ import { Stack } from "expo-router";
 import * as SplashScreen from "expo-splash-screen";
 import { useEffect } from "react";
 
+import { Loading } from "@/components/Loading";
+
 import { colors } from "@/theme/colors";
 
 SplashScreen.preventAutoHideAsync();
@@ -26,7 +28,7 @@ export default function Layout() {
   }, [areFontsLoaded, error]);
 
   if (!areFontsLoaded || !error) {
-    return null;
+    return <Loading />;
   }
 
   return (
