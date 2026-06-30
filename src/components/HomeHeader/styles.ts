@@ -16,4 +16,9 @@ export const styles = StyleSheet.create({
     fontFamily: fontFamily.regular,
     color: colors.white,
   },
+  total: {
+    fontSize: 32,
+    color: colors.white,
+    fontFamily: fontFamily.medium,
+  },
 });
