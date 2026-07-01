@@ -1,5 +1,6 @@
 import { View } from "react-native";
 
+import { Button } from "@/components/Button";
 import { HomeHeader } from "@/components/HomeHeader";
 import { List } from "@/components/List";
 import { Target } from "@/components/Target";
@@ -39,6 +40,9 @@ export default function App() {
         emptyMessage="No goals found."
         containerStyle={{ paddingHorizontal: 24 }}
       />
+      <View style={{ padding: 24, paddingBottom: 32 }}>
+        <Button title="Add Goal" />
+      </View>
     </View>
   );
 }
