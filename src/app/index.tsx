@@ -1,3 +1,4 @@
+import { router } from "expo-router";
 import { View } from "react-native";
 
 import { Button } from "@/components/Button";
@@ -36,12 +37,17 @@ export default function App() {
         title="Goals"
         data={targets}
         keyExtractor={(item) => item.id}
-        renderItem={({ item }) => <Target data={item} />}
+        renderItem={({ item }) => (
+          <Target
+            data={item}
+            onPress={() => router.navigate(`/in-progress/${item.id}`)}
+          />
+        )}
         emptyMessage="No goals found."
         containerStyle={{ paddingHorizontal: 24 }}
       />
       <View style={{ padding: 24, paddingBottom: 32 }}>
-        <Button title="Add Goal" />
+        <Button title="Add Goal" onPress={() => router.navigate("/target")} />
       </View>
     </View>
   );
