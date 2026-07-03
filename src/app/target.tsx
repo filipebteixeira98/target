@@ -17,7 +17,7 @@ export default function Target() {
           label="Target Name"
           placeholder="Ex: Apple Watch, Trip to the beach"
         />
-        <CurrencyInput label="Target value" value={0} />
+        <CurrencyInput label="Target value ($)" value={0} />
         <Button title="Save" />
       </View>
     </View>
